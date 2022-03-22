@@ -22,7 +22,7 @@ class LoginController extends Controller
             }
 
             if (count($user) > 0) {
-                if ($user[0]->status == 'Aprroved') {
+                if ($user[0]->status == 'Approved') {
                     if ($user[0]->username == 'admin') {
                         header('Location: http://localhost:8080/admin');
                     } else {
