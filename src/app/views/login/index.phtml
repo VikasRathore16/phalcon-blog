@@ -4,7 +4,7 @@ echo $help;
 
 <h2>Login</h2>
 
-<?php echo $this->tag->form(["login/login",'class' =>'form']); ?>
+<?php echo $this->tag->form(["login",'class' =>'form']); ?>
 
 
 <p>
@@ -21,8 +21,16 @@ echo $help;
     <?php echo $this->tag->linkTo("signup","Sign Up"); ?>
 </p>
 
+<div class="row small text-danger mb-2 mt-0">
+    <?php 
+    if(isset($msg)){
+        echo $msg;
+    }
+    ?>
+</div>
+
 <p>
-    <?php echo $this->tag->submitButton(["login",'class' => 'btn btn-primary']); ?>
+    <?php echo $this->tag->submitButton(["Log in",'class' => 'btn btn-primary']); ?>
 </p>
 
 </form>
